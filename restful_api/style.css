@@ -12,8 +12,8 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-inline: 3%;
-  max-height: 80rem;
+  /* padding-inline: 2rem; */
+  max-width: 80rem;
   margin-inline: auto;
 }
 .dark {
@@ -27,4 +27,43 @@ nav {
 }
 .title {
   font-weight: 800;
+}
+/* main */
+.counties-container {
+  max-width: 90rem;
+  margin-inline: auto;
+  display: flex;
+  gap: 64px;
+  flex-wrap: wrap;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.country-card {
+  margin-top: 10px;
+  padding-bottom: 1.3rem;
+  display: inline-block;
+
+  margin-inline: auto;
+  width: 250px;
+  border-radius: 0.8rem;
+  box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+.country-card img {
+  width: 100%;
+}
+.card-title {
+  font-size: 1rem;
+  margin-block: 0.5rem;
+}
+.card-content {
+  padding-inline: 16px;
+}
+.card-content p {
+  margin-block: 0.5rem;
+}
+main {
+  padding: 2rem;
 }

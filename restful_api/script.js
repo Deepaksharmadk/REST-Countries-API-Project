@@ -21,3 +21,8 @@ async function fetchDate() {
   });
 }
 fetchDate();
+// theme chaner
+const themeChanger = document.querySelector(".theme-changer");
+themeChanger.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+});

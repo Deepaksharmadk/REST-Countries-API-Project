@@ -10,6 +10,7 @@ const capital = document.querySelector(".capital");
 const topLevelDomain = document.querySelector(".top-level-domain");
 const currencies = document.querySelector(".currencies");
 const languages = document.querySelector(".languages");
+const borderCountries = document.querySelector(".border-countries");
 // fecth data by name
 const searchParams = new URLSearchParams(window.location.search).get("name");
 console.log(searchParams);
@@ -42,6 +43,24 @@ async function SearchByName() {
   }
   if (response[0].languages) {
     languages.innerText = Object.values(response[0].languages).join(", ");
+  }
+  console.log();
+  if (response[0].borders) {
+    response[0].borders.forEach((border) => {
+      console.log(border);
+      async function borderData() {
+        const borderfecth = await fetch(
+          `https://restcountries.com/v3.1/alpha/${border}`
+        );
+        const response = await borderfecth.json();
+        console.log(response);
+        const borderCountryTag = document.createElement("a");
+        borderCountryTag.innerText = response[0].name.common;
+        borderCountryTag.href = `country.html?name=${response[0].name.common}`;
+        borderCountries.append(borderCountryTag);
+      }
+      borderData();
+    });
   }
 }
 SearchByName();

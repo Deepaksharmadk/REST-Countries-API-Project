@@ -30,7 +30,7 @@ nav {
 }
 /* main */
 .counties-container {
-  max-width: 90rem;
+  max-width: 85rem;
   margin-inline: auto;
   display: flex;
   gap: 64px;
@@ -44,9 +44,10 @@ a {
   margin-top: 10px;
   padding-bottom: 1.3rem;
   display: inline-block;
-
+  cursor: pointer;
   margin-inline: auto;
   width: 250px;
+
   border-radius: 0.8rem;
   box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.2);
   overflow: hidden;
